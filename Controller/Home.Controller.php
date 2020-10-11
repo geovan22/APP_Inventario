@@ -12,7 +12,7 @@
         
         public function Inicio()
         {
-            echo "en home controller";
+            
             $this->smarty->display('Default.tpl');
         }
         
