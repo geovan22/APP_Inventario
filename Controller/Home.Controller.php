@@ -13,7 +13,6 @@
         public function Inicio()
         {
             echo "en home controller";
-            $this->smarty->assign('title','Colegio');
             $this->smarty->display('Default.tpl');
         }
         
