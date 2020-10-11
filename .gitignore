@@ -3,5 +3,7 @@
 
 # Ada Library Information
 *.ali
-/Model/Conexion.Model.php
-/templates_c
+Model/Conexion.Model.php
+templates_c
+
+Model/Conexion.Model.php

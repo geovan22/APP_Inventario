@@ -3,7 +3,7 @@
 	use Medoo\Medoo;
     class Conexion
     {
-       public function ConexionDB()
+       public function ConexionDB()//conexion local
        {
             $conexion = new Medoo([
             	// required
