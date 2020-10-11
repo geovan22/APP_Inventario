@@ -12,7 +12,7 @@
         
         public function Inicio()
         {
-            
+            $this->smarty->assign('title','Colegio');
             $this->smarty->display('Default.tpl');
         }
         
