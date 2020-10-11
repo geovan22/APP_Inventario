@@ -23,7 +23,7 @@
           </a>
           <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdownProfile" >            
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="http://proseminario.tonohost.com/">Cerrar sesión</a>
+            <a class="dropdown-item" href="?controller=Home&action=Inicio">Cerrar sesión</a>
           </div>
         </li>
       </ul>
