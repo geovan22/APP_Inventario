@@ -15,7 +15,7 @@
             <div class="card-header card-header-info">
               <center>
                 <h2 class="card-title">
-                  Creacion de Nivel
+                  Creacion de Nivel 
                 </h2>
                 <p class="card-category">
                   Complete lo que acontinuacion se solicita:

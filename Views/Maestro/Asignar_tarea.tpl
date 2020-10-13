@@ -31,6 +31,8 @@
                             <th><font color="Navy" face="Comic Sans MS,arial"><center>Grado</center></font></th>
                             <th><font color="Navy" face="Comic Sans MS,arial"><center>Nivel</center></font></th>
                             <th><font color="Navy" face="Comic Sans MS,arial"><center>Carrera</center></font></th>
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Sección</center></font></th>
+                        
                             <th width="10%"><font color="Navy" face="Comic Sans MS,arial"><center>Crear tarea</center></font></th>
                             <th width="10%"><font color="Navy" face="Comic Sans MS,arial"><center>Consultar tarea</center></font></th>                  
 						</tr>
@@ -51,6 +53,9 @@
                                 </td>
                                 <td>
                                     {$d['Carrera'][0]}
+                                </td>
+                                <td>
+                                
                                 </td>
         						<td>
                                     <a href="?controller=Maestro&action=CrearTarea&idMalla={$d['IdMalla'][0]}&datos={$d['Curso']}--{$d['Grado'][0]}--{$d['Nivel'][0]}--{$d['Carrera'][0]}" ><i class="material-icons">sticky_note_2</i></a>
