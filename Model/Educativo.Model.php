@@ -284,5 +284,12 @@
           /**
          * Actualizar
          */ 
+         
+         public function SelectTabla($tabla)
+         {
+            return $this->medoo->select($tabla,
+                "*"
+            );
+         }
     }
 ?>
