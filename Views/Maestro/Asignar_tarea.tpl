@@ -55,7 +55,7 @@
                                     {$d['Carrera'][0]}
                                 </td>
                                 <td>
-                                
+                                    {$d['Seccion'][0]}
                                 </td>
         						<td>
                                     <a href="?controller=Maestro&action=CrearTarea&idMalla={$d['IdMalla'][0]}&datos={$d['Curso']}--{$d['Grado'][0]}--{$d['Nivel'][0]}--{$d['Carrera'][0]}" ><i class="material-icons">sticky_note_2</i></a>

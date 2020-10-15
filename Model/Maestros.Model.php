@@ -66,9 +66,19 @@
         
          public function BuscarCarrera($id)
         {
-            return $this->medoo->select("Pro_Carrera","Carrera*",
+            return $this->medoo->select("Pro_Carrera","Carrera",
                 [
                     "id_Pro_Carrera"=>$id
+                ]
+            
+            );
+        }
+        
+        public function BuscarSeccion($id)
+        {
+            return $this->medoo->select("Pro_Seccion","Seccion",
+                [
+                    "id_Pro_Seccion"=>$id
                 ]
             
             );
