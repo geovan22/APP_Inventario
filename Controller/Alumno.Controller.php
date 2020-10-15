@@ -1,5 +1,5 @@
 <?php
-	class Alumno
+	class Alumno //SubirTarea
     {
         public $smarty;
         public $usuario;

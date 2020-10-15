@@ -74,6 +74,36 @@
             );
         }
         
+        public function BuscarTarea($idActividad,$idMaestro)
+        {
+            return $this->medoo->select("Pro_Tareas","*",
+                [
+                    "idPro_Actividad"=>$idActividad,
+                    "idPro_Maestro"=>$idMaestro
+                ]
+            
+            );
+        }
+        
+        public function BuscarActividad($idActividad)
+        {
+            return $this->medoo->select("Pro_Actividad","*",
+                [
+                    "id_Pro_Actividad"=>$idActividad
+                ]
+            
+            );
+        }
+        
+        public function BuscarAlumno($idAlumno)
+        {
+            return $this->medoo->select("Pro_UsuarioColegio","*",
+                [
+                    "id_Pro_Usuarios"=>$idAlumno
+                ]
+            );
+        }
+        
         public function BuscarSeccion($id)
         {
             return $this->medoo->select("Pro_Seccion","Seccion",

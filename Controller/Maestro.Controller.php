@@ -183,6 +183,27 @@
         
         public function CalificarTarea()
         {
+            $tareas=$this->consulta->BuscarTarea($_GET['idMalla'],$_SESSION['id']);
+            $actividad=$this->consulta->BuscarActividad($_GET['idMalla']);
+            $datos=array();
+            
+            foreach ($tareas as $t) 
+            {
+                $alumno=$this->consulta->BuscarAlumno($t['idPro_Alumno']);
+                array_push($datos,array(
+                        "idCalificar"=>$t['id_Pro_Tareas'],
+                        "Carnet"=>$alumno[0]['Carnet'],
+                        "Alumno"=>$alumno[0]['Nombre1'].", ".$alumno[0]['Apellido1'],
+                        "Enlace"=>$t['Enlace']
+                    )
+                );
+            }
+            
+            print_r($actividad);
+            echo "<br>";
+            echo "<br>";
+            echo "<br>";
+            print_r($datos);
             
         }
     }
