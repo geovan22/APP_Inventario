@@ -26,12 +26,7 @@
                 </li>
       
                   
-                  <li class="nav-item ">
-                    <a  href="#" data-toggle="collapse" class="nav-link">
-                      <i class="material-icons">sticky_note_2</i>
-                      <p>Notas</p>
-                    </a>
-                  </li> 
+                  
               
               </ul>
             </div>

@@ -25,21 +25,9 @@
                   </a>
                 </li>
       
-                  <li class="nav-item ">
+                  
                     
-                    
-                    <a href="?controller=Maestro&action=DireccionVistas&Vista=#" class="nav-link">
-                        <i class="material-icons">assignment_turned_in</i>
-                        <p>Calificar Tarea</p>
-                      </a>
-                    
-                  </li>
-                  <li class="nav-item ">
-                    <a  href="#" data-toggle="collapse" class="nav-link">
-                      <i class="material-icons">sticky_note_2</i>
-                      <p>Notas</p>
-                    </a>
-                  </li> 
+                  
               
               </ul>
             </div>
