@@ -11,6 +11,8 @@
     {include file="Maestro/Actividades_curso.tpl"}
  {else if $vista=="ModoficarTarea"}
     {include file="Maestro/ModificarTarea.tpl"}
+ {else if $vista=="NotasMaestro"}
+    {include file="Maestro/NotasMaestro.tpl"}
  
  {/if}
  

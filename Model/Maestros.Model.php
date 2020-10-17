@@ -148,7 +148,17 @@
             );
         }
         
-        
+        public function CalificarTarea($tarea, $punteo)
+        {
+            return $this->medoo->update("Pro_Tareas",
+                [
+                    "Punteo"=>$punteo
+                ],
+                [
+                    "id_Pro_Tareas"=>$tarea
+                ]
+            );
+        }
         
     }
 ?>

@@ -49,6 +49,10 @@
             {
                 $vista='ModoficarTarea';
             }
+            else if($vista=='NotasMaestro')
+            {
+                $vista='NotasMaestro';
+            }
                        
             
             $this->smarty->assign('vista',$vista);
@@ -199,11 +203,62 @@
                 );
             }
             
-            print_r($actividad);
-            echo "<br>";
-            echo "<br>";
-            echo "<br>";
-            print_r($datos);
+            
+            $this->smarty->assign('datos',$datos);
+            $this->smarty->assign('actividad',$actividad);
+            
+            $this->smarty->assign('vista',"NotasMaestro");
+            $this->smarty->assign('title','Maestro');
+            $this->smarty->display('Default.tpl'); 
+            
+        }
+        
+        public function CargarPunteo()
+        {
+            $cont=0;
+            $id=0;
+            $nota=0;
+            foreach ($_POST as $p) 
+            {
+                //echo "valor P: ".$p."---Valor cont: ".$cont."<br />";
+                if ($cont==0) 
+                {
+                    $nota=$p;
+                    $cont++;
+                }
+                else
+                {
+                    $cont=0;
+                    $id=$p;
+                    
+                    //echo "NoActividad: ".$id."   Nota: ".$nota."<br />";
+                    
+                    $this->consulta->CalificarTarea($id,$nota);
+                }
+                
+            }
+            
+            $cursos=$this->consulta->ObtenerCursos($_SESSION['id']);
+            
+            
+            $datos=array();
+            
+            foreach($cursos as $c) 
+            {
+               array_push($datos,array(
+                                        "IdMalla"=>$c['id_Pro_Malla'],
+                                        "Curso"=>$c['Curso'],
+                                        "Grado"=>$this->consulta->BuscarGrado($c['Pro_grado_id_Pro_grado']),
+                                        "Nivel"=>$this->consulta->BuscarNivel($c['Pro_Nivel_id_Pro_Nivel']),
+                                        "Carrera"=>$this->consulta->BuscarCarrera($c['Pro_Carrera_id_Pro_Carrera']),
+                                        "Seccion"=>$this->consulta->BuscarSeccion($c['Pro_Seccion_id_Pro_Seccion'])
+                                ));
+            }
+            $vista='AsignarTarea';
+            $this->smarty->assign('vista',$vista);
+            $this->smarty->assign('datos',$datos);
+            $this->smarty->assign('title','Maestro');
+            $this->smarty->display('Default.tpl'); 
             
         }
     }
