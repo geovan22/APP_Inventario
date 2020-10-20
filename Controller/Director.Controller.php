@@ -167,12 +167,12 @@
             else if($vista=="ConsultaNivel")
             {
                 $vista="ConsultaNivel";
-                $nivel=$this->educativo->SelectTabla("pro_nivel");
-                $grado=$this->educativo->SelectTabla("pro_grado");
-                $carrera=$this->educativo->SelectTabla("pro_carrera");
-                $seccion=$this->educativo->SelectTabla("pro_seccion");
-                $ciclo=$this->educativo->SelectTabla("pro_ciclo");
-                $malla=$this->educativo->SelectTabla("pro_malla");
+                $nivel=$this->educativo->SelectTabla("Pro_Nivel");
+                $grado=$this->educativo->SelectTabla("Pro_grado");
+                $carrera=$this->educativo->SelectTabla("Pro_Carrera");
+                $seccion=$this->educativo->SelectTabla("Pro_Seccion");
+                $ciclo=$this->educativo->SelectTabla("Pro_Ciclo");
+                $malla=$this->educativo->SelectTabla("Pro_Malla");
                 
                 $this->smarty->assign('malla',$malla);
                 $this->smarty->assign('nivel',$nivel);
