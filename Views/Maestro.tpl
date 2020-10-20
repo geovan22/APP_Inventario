@@ -17,14 +17,6 @@
  {/if}
  
  
- 
- 
- 
- 
- 
- 
- 
- 
  <script>
   
   $('.fixed-plugin a').click(function(event) {
