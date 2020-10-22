@@ -30,13 +30,13 @@
                 foreach($cursos as $c) 
                 {
                    array_push($datos,array(
-                                            "IdMalla"=>$c['id_Pro_Malla'],
-                                            "Curso"=>$c['Curso'],
-                                            "Grado"=>$this->consulta->BuscarGrado($c['Pro_grado_id_Pro_grado']),
-                                            "Nivel"=>$this->consulta->BuscarNivel($c['Pro_Nivel_id_Pro_Nivel']),
-                                            "Carrera"=>$this->consulta->BuscarCarrera($c['Pro_Carrera_id_Pro_Carrera']),
-                                            "Seccion"=>$this->consulta->BuscarSeccion($c['Pro_Seccion_id_Pro_Seccion'])
-                                    ));
+                        "IdMalla"=>$c['id_Pro_Malla'],
+                        "Curso"=>$c['Curso'],
+                        "Grado"=>$this->consulta->BuscarGrado($c['Pro_grado_id_Pro_grado']),
+                        "Nivel"=>$this->consulta->BuscarNivel($c['Pro_Nivel_id_Pro_Nivel']),
+                        "Carrera"=>$this->consulta->BuscarCarrera($c['Pro_Carrera_id_Pro_Carrera']),
+                        "Seccion"=>$this->consulta->BuscarSeccion($c['Pro_Seccion_id_Pro_Seccion'])
+                   ));
                 }
                 $vista='AsignarTarea';
                 $this->smarty->assign('datos',$datos);
@@ -246,21 +246,69 @@
             foreach($cursos as $c) 
             {
                array_push($datos,array(
-                                        "IdMalla"=>$c['id_Pro_Malla'],
-                                        "Curso"=>$c['Curso'],
-                                        "Grado"=>$this->consulta->BuscarGrado($c['Pro_grado_id_Pro_grado']),
-                                        "Nivel"=>$this->consulta->BuscarNivel($c['Pro_Nivel_id_Pro_Nivel']),
-                                        "Carrera"=>$this->consulta->BuscarCarrera($c['Pro_Carrera_id_Pro_Carrera']),
-                                        "Seccion"=>$this->consulta->BuscarSeccion($c['Pro_Seccion_id_Pro_Seccion'])
-                                ));
+                    "IdMalla"=>$c['id_Pro_Malla'],
+                    "Curso"=>$c['Curso'],
+                    "Grado"=>$this->consulta->BuscarGrado($c['Pro_grado_id_Pro_grado']),
+                    "Nivel"=>$this->consulta->BuscarNivel($c['Pro_Nivel_id_Pro_Nivel']),
+                    "Carrera"=>$this->consulta->BuscarCarrera($c['Pro_Carrera_id_Pro_Carrera']),
+                    "Seccion"=>$this->consulta->BuscarSeccion($c['Pro_Seccion_id_Pro_Seccion'])
+                ));
             }
             $vista='AsignarTarea';
             $this->smarty->assign('vista',$vista);
             $this->smarty->assign('datos',$datos);
             $this->smarty->assign('title','Maestro');
-            $this->smarty->display('Default.tpl'); 
-            
+            $this->smarty->display('Default.tpl');  
         }
+        
+        public function VerNotas()
+        {
+            $notas=$this->consulta->VerNotas($_GET['Curso']);
+            
+            $datos=array();
+            $actividad=array();
+            $temp=array();
+                
+            foreach($notas as $n) 
+            {
+               $estudiante=$this->consulta->BuscarAlumno($n['idPro_Alumno']); 
+               $nom=$estudiante[0]['Nombre1'].", ".$estudiante[0]['Apellido1'];
+               $acti=$this->consulta->VerTarea($n['idPro_Actividad']);
+               array_push($datos,array
+                    (
+                        "alumno"=>$nom,
+                        "tarea"=> $acti[0]['Nombre'],
+                        "punteo"=>$n['Punteo']
+                        
+                    )
+               );
+               
+               array_push($actividad,array
+                    (
+                        "tarea"=> $acti[0]['Nombre']
+                    )
+               );
+               
+        
+            }
+           
+            $i=0;
+            $arraySinDuplicados = [];
+            foreach($actividad as $elemento) {
+                if (!in_array($elemento, $arraySinDuplicados)) {
+                    $arraySinDuplicados[] = $elemento;
+                }
+            }
+            echo"<br /><br />";
+            print_r($arraySinDuplicados);
+            echo "<br /><br />";
+            print_r($datos);
+            die();
+            $this->smarty->assign('tareas',$arraySinDuplicados);
+            $this->smarty->assign('datos',$datos);
+            $this->smarty->assign('vista','');
+            $this->smarty->assign('title','Maestro');
+            $this->smarty->display('Default.tpl'); 
     }
     
     /*
@@ -272,6 +320,7 @@
         codigo de grado y curso
         ver parte contable por ciclos que sea independiente
     */
+    }
 ?>
 
 

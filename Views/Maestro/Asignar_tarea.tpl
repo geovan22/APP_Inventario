@@ -65,7 +65,7 @@
                                     <a href="?controller=Maestro&action=ConsultarTarea&idMalla={$d['IdMalla'][0]}&datos={$d['Curso']}--{$d['Grado'][0]}--{$d['Nivel'][0]}--{$d['Carrera'][0]}"" ><i class="material-icons">rate_review</i></a>                                                          
                                 </td>
                                 <td>                                                            
-                                    <a href="" ><i class="material-icons">chrome_reader_mode</i></a>                                                          
+                                    <a href="?controller=Maestro&action=VerNotas&Datos={$d['Curso']}&Curso={$d['IdMalla']}" ><i class="material-icons">chrome_reader_mode</i></a>                                                          
                                 </td>
                             </tr>
                         {/foreach}

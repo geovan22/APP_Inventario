@@ -160,5 +160,14 @@
             );
         }
         
+        public function VerNotas($idCurso) 
+        {
+            return $this->medoo->select("Pro_Tareas","*",
+                [
+                    "idPro_Curso"=>$idCurso
+                ]
+            );
+        }
+        
     }
 ?>
