@@ -34,7 +34,8 @@
                             <th><font color="Navy" face="Comic Sans MS,arial"><center>Sección</center></font></th>
                         
                             <th width="10%"><font color="Navy" face="Comic Sans MS,arial"><center>Crear tarea</center></font></th>
-                            <th width="10%"><font color="Navy" face="Comic Sans MS,arial"><center>Consultar tarea</center></font></th>                  
+                            <th width="10%"><font color="Navy" face="Comic Sans MS,arial"><center>Consultar tarea</center></font></th>
+                            <th width="10%"><font color="Navy" face="Comic Sans MS,arial"><center>Ver notas</center></font></th>                  
 						</tr>
 					</thead>
 					<tbody>						
@@ -62,6 +63,9 @@
                                 </td>
                                 <td>                                                            
                                     <a href="?controller=Maestro&action=ConsultarTarea&idMalla={$d['IdMalla'][0]}&datos={$d['Curso']}--{$d['Grado'][0]}--{$d['Nivel'][0]}--{$d['Carrera'][0]}"" ><i class="material-icons">rate_review</i></a>                                                          
+                                </td>
+                                <td>                                                            
+                                    <a href="" ><i class="material-icons">chrome_reader_mode</i></a>                                                          
                                 </td>
                             </tr>
                         {/foreach}
