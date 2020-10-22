@@ -49,6 +49,7 @@
                         <th><font color="Navy" face="Comic Sans MS,arial"><center>Curso</center></font></th>
                     
                         <th width="9%"><font color="Navy" face="Comic Sans MS,arial"><center>Ver Actividad</center></font></th>
+                        <th width="9%"><font color="Navy" face="Comic Sans MS,arial"><center>Ver Notas</center></font></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,9 +60,14 @@
                             </td>
                             <td>
                                 <center>
-                                <a href="?controller=Alumno&action=ListarActividad&idMalla={$c['id_Pro_Malla']}&curso={$c['Curso']}" ><i class="material-icons">preview</i></a>
+                                <a href="?controller=Alumno&action=ListarActividad&idMalla={$c['id_Pro_Malla']}&curso={$c['Curso']}" ><i class="material-icons">chrome_reader_mode</i></a>
                             </center>
                           
+                            </td>
+                            <td>
+                            <center>
+                            <a href=""><i class="material-icons"></i></a>
+                            </center>
                             </td>
                         </tr>	
                     {/foreach}
