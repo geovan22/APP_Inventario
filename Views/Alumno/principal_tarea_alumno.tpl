@@ -60,13 +60,13 @@
                             </td>
                             <td>
                                 <center>
-                                <a href="?controller=Alumno&action=ListarActividad&idMalla={$c['id_Pro_Malla']}&curso={$c['Curso']}" ><i class="material-icons">chrome_reader_mode</i></a>
+                                <a href="?controller=Alumno&action=ListarActividad&idMalla={$c['id_Pro_Malla']}&curso={$c['Curso']}" ><i class="material-icons">rate_review</i></a>
                             </center>
                           
                             </td>
                             <td>
                             <center>
-                            <a href=""><i class="material-icons"></i></a>
+                            <a href=""><i class="material-icons">chrome_reader_mode</i></a>
                             </center>
                             </td>
                         </tr>	
