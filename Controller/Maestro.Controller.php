@@ -268,6 +268,7 @@
             $datos=array();
             $actividad=array();
             $temp=array();
+            $punteo=array();
                 
             foreach($notas as $n) 
             {
@@ -299,14 +300,14 @@
                     $arraySinDuplicados[] = $elemento;
                 }
             }
-            echo"<br /><br />";
-            print_r($arraySinDuplicados);
-            echo "<br /><br />";
-            print_r($datos);
-            die();
+            //echo"<br /><br />";
+            //print_r($arraySinDuplicados);
+            //echo "<br /><br />";
+            //print_r($datos);
+            //die();
             $this->smarty->assign('tareas',$arraySinDuplicados);
             $this->smarty->assign('datos',$datos);
-            $this->smarty->assign('vista','');
+            $this->smarty->assign('vista','VerNotas');
             $this->smarty->assign('title','Maestro');
             $this->smarty->display('Default.tpl'); 
     }
