@@ -28,31 +28,28 @@
                 <table class="table table-striped table-bordered table-hover table-active">
 					<thead class="thead-green">
 						<tr>
-                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Alumno</center></font></th>                 {$cont=0}
-                            {foreach from=$tareas item=$t }
-                            {$cont++}
-                                <th><font color="Navy" face="Comic Sans MS,arial">
-                                    <center>{$t['tarea']}</center></font>
-                                </th>    
-                            {/foreach}
-                            
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>No</center></font></th>
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Alumno</center></font></th>           
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Actividad</center></font></th>     
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Punteo</center></font></th> 
 						</tr>
 					</thead>
 					<tbody>	
-                        {foreach from=$datos item=$d }
                         {$var=0}
-                            <tr>
-                                 <td>
+                        {foreach key=key from=$datos item=d }
+                            <tr>   
+                                <td>
+                                    {$key}
+                                </td>   
+                                <td>
                                     {$d['alumno']}
-                                 </td> 
-                                 {foreach from=$datos item=$p }
-                                    {if $var<$cont}
-                                         <td>
-                                            {$p['punteo']}
-                                         </td> 
-                                         {$var++}
-                                    {/if}
-                                 {/foreach}                      
+                                </td>  
+                                <td>
+                                    {$d['tarea']}
+                                </td> 
+                                <td>
+                                    {$d['punteo']}
+                                </td>       
                             </tr>
                         {/foreach}
                     </tbody>
