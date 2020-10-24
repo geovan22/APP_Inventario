@@ -28,37 +28,36 @@
                 <table class="table table-striped table-bordered table-hover table-active">
 					<thead class="thead-green">
 						<tr>
-                            <th><font color="Navy" face="Comic Sans MS,arial"><center>No</center></font></th>
-                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Alumno</center></font></th>           
-                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Actividad</center></font></th>     
-                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Punteo</center></font></th> 
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Alumno</center></font></th>                 
+                            {foreach from=$tareas item=$t }
+                            
+                                <th><font color="Navy" face="Comic Sans MS,arial">
+                                    <center>{$t['tarea']}</center></font>
+                                </th>    
+                            {/foreach}
+                            
 						</tr>
 					</thead>
 					<tbody>	
-                        {$var=0}
-                        {foreach key=key from=$datos item=d }
-                            <tr>   
-                                <td>
-                                    {$key}
-                                </td>   
+                        {foreach  from=$datos item=d }  
+                              <tr>
                                 <td>
                                     {$d['alumno']}
-                                </td>  
+                                </td>
                                 <td>
                                     {$d['tarea']}
-                                </td> 
+                                </td>
                                 <td>
                                     {$d['punteo']}
-                                </td>       
-                            </tr>
+                                </td>
+                              </tr>
                         {/foreach}
                     </tbody>
                 </table>
                 
                 <hr />
                 
-				
-                <input type="submit" value="Cargar Notas" />
+			
 			</div>
 		</div>
     </div>
