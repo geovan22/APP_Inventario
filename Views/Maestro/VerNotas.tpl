@@ -29,12 +29,8 @@
 					<thead class="thead-green">
 						<tr>
                             <th><font color="Navy" face="Comic Sans MS,arial"><center>Alumno</center></font></th>                 
-                            {foreach from=$tareas item=$t }
-                            
-                                <th><font color="Navy" face="Comic Sans MS,arial">
-                                    <center>{$t['tarea']}</center></font>
-                                </th>    
-                            {/foreach}
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Actividad</center></font></th>
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>punteo</center></font></th>
                             
 						</tr>
 					</thead>

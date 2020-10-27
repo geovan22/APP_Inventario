@@ -45,6 +45,17 @@
             );
         }
         
+        public function BuscarActividad2($id)
+        {
+            return $this->medoo->select(
+                "Pro_Actividad",
+                "*",
+                [
+                    "id_Pro_Actividad"=>$id
+                ]
+            );
+        }
+        
         public function BuscarCurso($curso)
         {
             return $this->medoo->select(
@@ -70,6 +81,18 @@
                     "idPro_Carrera"=>$carrera,
                     "Enlace"=>$enlace
                     
+                ]
+            );
+        }
+        
+        public function BuscarNotasAlumno($idActividad, $idAlumno) 
+        {
+           return $this->medoo->select(
+                "Pro_Tareas",
+                "*",
+                [
+                    "idPro_Curso"=>$idActividad,
+                    "idPro_Alumno"=>$idAlumno
                 ]
             );
         }

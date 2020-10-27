@@ -9,6 +9,8 @@
     {include file='Alumno/tarea_curso.tpl'}
  {else if $vista=='SubirTarea'}
     {include file='Alumno/subir_tarea.tpl'}
+ {else if $vista=='NotasAlumno'}
+    {include file='Alumno/Notas_Alumno.tpl'}
 
 
  {/if}

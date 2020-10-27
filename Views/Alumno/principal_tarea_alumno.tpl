@@ -66,7 +66,7 @@
                             </td>
                             <td>
                             <center>
-                            <a href=""><i class="material-icons"></i></a>
+                            <a href="?controller=Alumno&action&action=VerNota&IdCurso={$c['id_Pro_Malla']}"><i class="material-icons">Nota</i></a>
                             </center>
                             </td>
                         </tr>	

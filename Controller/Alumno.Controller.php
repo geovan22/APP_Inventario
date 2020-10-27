@@ -37,6 +37,10 @@
             {
                 $vista='SubirTarea';
             }
+            if($vista=='NotasAlumno')
+            {
+                $vista='NotasAlumno';
+            }
             $this->smarty->assign('title','Alumno');
             $this->smarty->assign('vista',$vista);
             $this->smarty->display('Default.tpl');
@@ -82,6 +86,31 @@
             $this->smarty->assign('title','Alumno');
             $this->smarty->assign('vista','Tareas');
             $this->smarty->display('Default.tpl');
+        }
+        
+        public function VerNota() 
+        {
+              
+              $datos=$this->estudiante->BuscarNotasAlumno($_GET['IdCurso'],$_SESSION['id']);
+              
+              $notas=array();
+              
+              foreach ($datos as $d) 
+              {
+                $actividad=$this->estudiante->BuscarActividad2($d['idPro_Actividad']);
+                array_push($notas,array(
+                        "Actividad"=>$actividad[0]['Nombre'],
+                        "Descripcion"=>$actividad[0]['Descripcion'],
+                        "Punteo"=>$d['Punteo']
+                     )
+                );
+              }
+              
+              
+              $this->smarty->assign('notas',$notas);
+              $this->smarty->assign('title','Alumno');
+              $this->smarty->assign('vista','NotasAlumno');
+              $this->smarty->display('Default.tpl');
         }
     }
 ?>

@@ -29,18 +29,21 @@
 						<tr>
                             <th><font color="Navy" face="Comic Sans MS,arial"><center>Actividad</center></font></th>
                             <th><font color="Navy" face="Comic Sans MS,arial"><center>Descripción</center></font></th>
-                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Valor</center></font></th>
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Punteo</center></font></th>
                             
                         
                                             
 						</tr>
 					</thead>
 					<tbody>	
-					<tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>					   
+                    {foreach from=$notas item=n}
+                        <tr>
+                            <td>{$n['Actividad']}</td>
+                            <td>{$n['Descripcion']}</td>
+                            <td>{$n['Punteo']}</td>
+                        </tr>
+                    {/foreach}
+										   
 					</tbody>
 				</table>
 			</div>
