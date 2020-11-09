@@ -205,13 +205,13 @@
             $genero=$_POST['genero'];
            
             
-           
-            
             $p=$this->educativo->BuscarPuesto2($puesto);
            
+             var_dump($_POST);echo "<br /><br />";
             
-            
-            $this->usuasrio->CrearUsuarioColegio($p[0]['id_Pro_Puesto'],$n1,$n2,$n3,$a1,$a2,$fecha,$genero,$cui,$tel,$email,$dir);
+            $dat=$this->usuasrio->CrearUsuarioColegio($p[0]['id_Pro_Puesto'],$n1,$n2,$n3,$a1,$a2,$fecha,$genero,$cui,$tel,$email,$dir);
+        
+             var_dump($dat);die();
         
             if($puesto=="Alumno")
             {

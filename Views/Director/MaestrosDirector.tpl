@@ -79,17 +79,17 @@
                   </div>
                   
                   <div class="form-group col-md-6 py-3 ">
-                    <label for="inputPassword5">
+                    <label for="direccion">
                       Dirección
                     </label>
-                    <input type="text" name="dir" class="form-control" id="Apellido_1" required>
+                    <input type="text" name="dir" class="form-control" id="direccion" required>
                   </div>
                   
                   <div class="form-group col-md-6 py-3 ">
-                    <label for="inputPassword5">
+                    <label for="telefono">
                       Telefono
                     </label>
-                    <input type="text" name="tel" class="form-control" id="Apellido_1" required>
+                    <input type="text" name="tel" class="form-control" id="telefono" required>
                   </div>
                   
                   <div class="form-group col-md-6 py-3">
