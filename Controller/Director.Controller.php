@@ -192,6 +192,8 @@
            
             $puesto=$_GET['puesto'];
             
+            echo "en puesto: ".$puesto."<br /><br />":
+            
             $n1=$_POST['n1'];
             $n2=$_POST['n2'];
             $n3=$_POST['n3'];
