@@ -192,7 +192,7 @@
            
             $puesto=$_GET['puesto'];
             
-            echo "en puesto: ".$puesto."<br /><br />";
+           
             
             $n1=$_POST['n1'];
             $n2=$_POST['n2'];
@@ -208,13 +208,11 @@
            
             
             $p=$this->educativo->BuscarPuesto2($puesto);
-            echo "puesto: ".$p[0]['id_Pro_Puesto']."<br /><br />";
-           
-             var_dump($_POST);echo "<br /><br />";
+            
             
             $dat=$this->usuasrio->CrearUsuarioColegio($p[0]['id_Pro_Puesto'],$n1,$n2,$n3,$a1,$a2,$fecha,$genero,$cui,$tel,$email,$dir);
         
-             var_dump($dat);die();
+             
         
             if($puesto=="Alumno")
             {
