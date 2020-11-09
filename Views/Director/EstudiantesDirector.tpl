@@ -73,7 +73,7 @@
                   <label for="inputPassword5">
                     Fecha de Nacimiento
                   </label>
-                  <input type="date" name="fecha" class="form-control" id="DateTimePicker" required>
+                  <input type="date" name="fechanac" class="form-control" id="DateTimePicker" required>
                 </div>
                 
                 <div class="form-group col-md-6 py-3 ">

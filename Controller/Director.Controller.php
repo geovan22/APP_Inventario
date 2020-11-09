@@ -189,6 +189,7 @@
         
         public function GuardarUsuario()
         {
+           
             $puesto=$_GET['puesto'];
             
             $n1=$_POST['n1'];
@@ -203,6 +204,8 @@
             $email=$_POST['email'];
             $genero=$_POST['genero'];
             $seccion=$_POST['seccion'];
+            
+           
             
             $p=$this->educativo->BuscarPuesto2($puesto);
             $s=$this->educativo->BuscarSeccion($seccion);
@@ -219,7 +222,7 @@
                 $tel1=$_POST['tel1e'];
                 $tel2=$_POST['tel2e'];
                 $dir=$_POST['dire'];
-                $parentezco['pe'];
+                $parentezco=$_POST['pe'];
                 
                 $nivel=$_POST['nivel'];
                 $grado=$_POST['grado'];
