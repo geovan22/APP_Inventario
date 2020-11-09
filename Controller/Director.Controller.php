@@ -206,7 +206,7 @@
            
             
             $p=$this->educativo->BuscarPuesto2($puesto);
-            echo "puesto: ".$p."<br /><br />";
+            echo "puesto: ".$p[0]['id_Pro_Puesto']."<br /><br />";
            
              var_dump($_POST);echo "<br /><br />";
             
