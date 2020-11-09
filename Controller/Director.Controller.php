@@ -203,21 +203,20 @@
             $tel=$_POST['tel'];
             $email=$_POST['email'];
             $genero=$_POST['genero'];
-            if(isset($_POST['seccion'])) 
-                $seccion=$_POST['seccion'];
-            else
-                $seccion=1;
+           
             
            
             
             $p=$this->educativo->BuscarPuesto2($puesto);
-            $s=$this->educativo->BuscarSeccion($seccion);
+           
             
             
             $this->usuasrio->CrearUsuarioColegio($p[0]['id_Pro_Puesto'],$n1,$n2,$n3,$a1,$a2,$fecha,$genero,$cui,$tel,$email,$dir);
         
             if($puesto=="Alumno")
             {
+                $seccion=$_POST['seccion'];
+                 $s=$this->educativo->BuscarSeccion($seccion);
                 $idAlumno=$this->usuasrio->BuscarAlumno($cui);
                 
                 $n1=$_POST['ne'];
