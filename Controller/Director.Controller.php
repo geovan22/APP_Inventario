@@ -203,7 +203,10 @@
             $tel=$_POST['tel'];
             $email=$_POST['email'];
             $genero=$_POST['genero'];
-            $seccion=$_POST['seccion'];
+            if(isset($_POST['seccion'])) 
+                $seccion=$_POST['seccion'];
+            else
+                $seccion=1;
             
            
             
