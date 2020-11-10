@@ -22,11 +22,16 @@
             $dpi=$_POST['dpi'];
             $usuario=$this->usuasrio->BuscarAlumno($dpi);
             
+           // var_dump($usuario);
+            
             if(count($usuario)==1)
             {
-                $puesto= $this->usuasrio->BuscarPuesto($dpi[0]['Pro_Puesto_id_Por_Puesto']);
+                $puesto= $this->usuasrio->BuscarPuesto($usuario[0]['Pro_Puesto_id_Pro_Puesto']);
                 $pass=$this->library->GeneraPassword();
-                echo "puesto: ".$puesto[0]['Puesto'],"<br>";
+                //echo "puesto: ".$puesto[0]['Puesto'],"<br>";  
+                
+                $carnet=  "2020".$usuario[0]['id_Pro_Usuarios'].$usuario[0]['Pro_Puesto_id_Pro_Puesto'];
+               
                 if($puesto[0]['Puesto']=='Alumno')
                 {
                     $dato=$this->usuasrio->BuscarInscrito($usuario[0]['id_Pro_Usuarios']);
@@ -41,7 +46,7 @@
                     $a2=$usuario[0]['Apellido1'];
                     
                     $user=strtolower($n1[0].$a1.$a2[0]);
-                    $carnet=  "2020".$usuario[0]['id_Pro_Usuarios'].$usuario[0]['Pro_Puesto_id_Pro_Puesto'];
+                    
                 }
             
                 $this->usuasrio->CrearUsuario($usuario[0]['id_Pro_Usuarios'],$user,$pass,$carnet);
