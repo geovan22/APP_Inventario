@@ -30,7 +30,7 @@
                 $pass=$this->library->GeneraPassword();
                 //echo "puesto: ".$puesto[0]['Puesto'],"<br>";  
                 
-                $carnet=  "2020".$usuario[0]['id_Pro_Usuarios'].$usuario[0]['Pro_Puesto_id_Pro_Puesto'];
+                //
                
                 if($puesto[0]['Puesto']=='Alumno')
                 {
@@ -38,6 +38,8 @@
                     $ciclo=$this->educativo->BuscarCiclo($dato[0]['Pro_Ciclo_id_Pro_Ciclo']);
                     $user=$ciclo[0]['Ciclo'].$dato[0]['Pro_Carrera_id_Pro_Carrera'].$dato[0]['Pro_grado_id_Pro_grado'].$dato[0]['Pro_Nivel_id_Pro_Nivel'].$usuario[0]['id_Pro_Usuarios'];
                     echo "user alumno: ".$user."<br>";
+                    
+                    $carnet=$user;
                 }
                 else if(count($usuario)==1)
                 {
@@ -46,7 +48,7 @@
                     $a2=$usuario[0]['Apellido1'];
                     
                     $user=strtolower($n1[0].$a1.$a2[0]);
-                    
+                    $carnet=  "2020".$usuario[0]['id_Pro_Usuarios'].$usuario[0]['Pro_Puesto_id_Pro_Puesto'];
                 }
             
                 $this->usuasrio->CrearUsuario($usuario[0]['id_Pro_Usuarios'],$user,$pass,$carnet);
