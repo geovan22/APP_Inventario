@@ -21,7 +21,7 @@
         {
             $dpi=$_POST['dpi'];
             $usuario=$this->usuasrio->BuscarAlumno($dpi);
-               var_dump($usuario);  echo "<br /><br />";
+               //var_dump($usuario);  echo "<br /><br />";
            // var_dump($usuario);
             
             if(count($usuario)==1)
