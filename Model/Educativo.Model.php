@@ -12,7 +12,7 @@
         }
         
         /**
-         *  Actualizar
+         *  Actualizar      BuscarInscrito
          */
          
          public function ActualizarMalla($id,$carrera,$grado,$nivle,$curso)
