@@ -36,8 +36,9 @@
                 {
                     $dato=$this->usuasrio->BuscarInscrito($usuario[0]['id_Pro_Usuarios']);
                     $ciclo=$this->educativo->BuscarCiclo($dato[0]['Pro_Ciclo_id_Pro_Ciclo']);
+                    var_dump($dato);  echo "<br /><br />";
                     $user=$ciclo[0]['Ciclo'].$dato[0]['Pro_Carrera_id_Pro_Carrera'].$dato[0]['Pro_grado_id_Pro_grado'].$dato[0]['Pro_Nivel_id_Pro_Nivel'].$usuario[0]['id_Pro_Usuarios'];
-                    echo "user alumno: ".$user."<br>";
+                    var_dump($user);   die();
                     
                     $carnet=$user;
                 }
