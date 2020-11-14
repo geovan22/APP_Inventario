@@ -29,7 +29,7 @@
             {
                 $this->educativo->CrearGrado($grado);
             }
-            if($carrera!="" && $seccion!="")
+            if($carrera!="" )
             {
                $this->educativo->CrearCarrera($carrera);
             }
@@ -41,6 +41,7 @@
             {
                $this->educativo->CrearSeccion($seccion);
             }
+            
   
             $this->smarty->assign('vista','Grados');
             $this->smarty->assign('title','Director');
