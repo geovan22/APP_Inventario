@@ -176,7 +176,8 @@
                                         "Curso"=>$c['Curso'],
                                         "Grado"=>$this->consulta->BuscarGrado($c['Pro_grado_id_Pro_grado']),
                                         "Nivel"=>$this->consulta->BuscarNivel($c['Pro_Nivel_id_Pro_Nivel']),
-                                        "Carrera"=>$this->consulta->BuscarCarrera($c['Pro_Carrera_id_Pro_Carrera'])
+                                        "Carrera"=>$this->consulta->BuscarCarrera($c['Pro_Carrera_id_Pro_Carrera']),
+                                        "Seccion"=>$this->consulta->BuscarSeccion($c['Pro_Seccion_id_Pro_Seccion'])
                                 ));
             }
             $vista='AsignarTarea';
