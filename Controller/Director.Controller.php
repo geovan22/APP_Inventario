@@ -554,6 +554,9 @@
             $nivel=$this->educativo->VerNivel();
             $grado=$this->educativo->VerGrado();
             $carrera=$this->educativo->VerCarrera();
+             $seccion=$this->educativo->VerSeccion();
+                
+                $this->smarty->assign('seccion',$seccion);
             
             $this->smarty->assign('nivel',$nivel);
             $this->smarty->assign('grado',$grado);
@@ -577,11 +580,15 @@
                 
                 $this->smarty->assign('id',$idCurso);
                 $this->smarty->assign('maestros',$maestro);
+                 $seccion=$this->educativo->VerSeccion();
+                
+                $this->smarty->assign('seccion',$seccion);
                 $this->smarty->assign('curso',$Curso);
                 
                 $this->smarty->assign('vista','AsignarMaestro');
                 $this->smarty->assign('title','Director');
                 $this->smarty->display('Default.tpl');
+
             }
             else
             {
@@ -593,6 +600,9 @@
                 $nivel=$this->educativo->VerNivel();
                 $grado=$this->educativo->VerGrado();
                 $carrera=$this->educativo->VerCarrera();
+                 $seccion=$this->educativo->VerSeccion();
+                
+                $this->smarty->assign('seccion',$seccion);
                 
                 $this->smarty->assign('nivel',$nivel);
                 $this->smarty->assign('grado',$grado);
